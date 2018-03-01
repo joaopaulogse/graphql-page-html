@@ -15,7 +15,7 @@ const crawler = async () => {
     const page = await browser.newPage()
     
     await page.goto('http://example.com')
-    const html = await page.$('*')
+    const html = await page.content()
 
     const $ = cheerio.load(html);
 
